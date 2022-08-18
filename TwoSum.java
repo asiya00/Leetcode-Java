@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] arr;
@@ -13,5 +15,25 @@ class Solution {
             }
         }
         return(arr);
+    }
+}
+
+public class TwoSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+        System.out.print("Enter the elements: ");
+        int[] inp = new int[n];
+        for (int i=0; i<n; i++){
+            inp[i] = sc.nextInt();
+        }
+        System.out.println("Enter the target element: ");
+        int target = sc.nextInt();
+        Solution s = new Solution();
+        int[] result = s.twoSum(inp, target);
+        for (Integer i:result){
+            System.out.print(i+" ");
+        }
     }
 }
